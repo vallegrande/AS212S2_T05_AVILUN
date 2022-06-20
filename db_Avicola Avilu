@@ -1,0 +1,27 @@
+* Crear base de datos dbRestaurante */
+CREATE DATABASE dbRestaurante;
+
+/* Poner en uso la base de datos */
+USE dbRestaurante;
+
+/* Crear tabla Pedido */
+CREATE TABLE Pedido
+(
+    IDPRO int auto_increment,
+    NOMPRO varchar(50),
+    DESCPRO varchar(50),
+    PREPRO decimal(8,2),
+    STOCKPRO int,
+    AREAPRO varchar(50),
+    PABEPRO varchar(50),
+    CONSTRAINT PRODUCTO_pk PRIMARY KEY (IDPRO)
+);
+
+/* Insertar registros */
+INSERT INTO PEDIDO
+(IDPRO , NOMPRO ,  DESCPRO ,PREPRO , STOCKPRO , AREAPRO ,PABEPRO ),    
+VALUES
+('00001,'Gallina','que llegue en buen estado','18.00','50','01','1Primer');
+
+/* Listar los registros de la tabla PEDIDO */
+SELECT * FROM PEDIDO;
