@@ -4,7 +4,7 @@ const formArticulo = document.querySelector("form");
 const userped = document.getElementById("USERPED");
 const emausped = document.getElementById("EMAUSPED");
 const celusped = document.getElementById("CELUSPED");
-const proped = document.getElementById("PROPED");
+const fooped = document.getElementById("FOODPED");
 const msgped = document.getElementById("MSGPED");
 var opcion = '';
 
@@ -17,7 +17,7 @@ formArticulo.addEventListener('submit',
     (e) => {
    	 e.preventDefault();
    	 if (opcion == 'crear') {
-   		 if (USERPED.value == "" || EMAUSPED.value == "" || CELUSPED.value == "" || PROPED.value == "" || MSGPED.value == "") {
+   		 if (USERPED.value == "" || EMAUSPED.value == "" || CELUSPED.value == "" || FOODPED.value == "" || MSGPED.value == "") {
        		 alert("Asegúrese de que todos los campos estén completos");
        		 return false;
    		 } else {
@@ -34,7 +34,7 @@ formArticulo.addEventListener('submit',
                        		 USERPED: USERPED.value,
                        		 EMAUSPED: EMAUSPED.value,
                        		 CELUSPED: CELUSPED.value,
-                       		 PROPED: PROPED.value,
+                       		 FOODPED: FOODPED.value,
                        		 MSGPED: MSGPED.value
                    		 }
                		 )

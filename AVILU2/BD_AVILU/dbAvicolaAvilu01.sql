@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS dbAvicolaAvilu01;
+-- DROP DATABASE IF EXISTS dbAvicolaAvilu01;
 CREATE DATABASE dbAvicolaAvilu01;
 USE dbAvicolaAvilu01;
 
@@ -92,14 +92,14 @@ CREATE TABLE VENTA (
 
 -- tabla nueva --
 
-CREATE TABLE PEDIDO (
+CREATE TABLE Pedido
+(
      IDPED int AUTO_INCREMENT,
-     USERPED varchar(50),
-     EMAUSPED varchar(50),
+     USERPED varchar(80),
+     EMAUSPED varchar(80),
      CELUSPED char(9),
-     PROPED varchar(50),
+     FOODPED varchar(80),
      MSGPED   varchar(250),
-     IDVENT int,
      PRIMARY KEY (IDPED)
 );
 
@@ -153,11 +153,6 @@ ALTER TABLE VENTA ADD CONSTRAINT VENTA_VENDEDOR FOREIGN KEY VENTA_VENDEDOR (IDVE
 ALTER TABLE VENTA ADD CONSTRAINT VENTA_VIAJE FOREIGN KEY VENTA_VIAJE (IDVIA)
     REFERENCES VIAJE (IDVIA);
     
--- Reference: PEDIDO_VENTA (table: PEDIDO)
-ALTER TABLE PEDIDO ADD CONSTRAINT PEDIDO_VENTA FOREIGN KEY PEDIDO_VENDEDOR (IDVENT)
-    REFERENCES VIAJE (IDVIA);
-
-
  
 -- Inserción de datos
 
@@ -2126,17 +2121,17 @@ Insert into VENTA_DETALLE
 select * from venta_detalle;
 
 Insert into PEDIDO
-      (USERPED,EMAUSPED,CELUSPED,PROPED,MSGPED,IDVENT)
+      (USERPED, EMAUSPED, CELUSPED, FOODPED, MSGPED)
 values
-      ('Carlos Sanchez','Carlos.sanchez@vallegrande.edu.pe','988277261','Huevos','Quiero 1K huevos a mi domicilio','1'),
-      ('Angelo Ramirez','Angelo.ramirez@vallegrande.edu.pe','988222261','Huevos','Quiero 5k huevos a mi domicilio','2'),
-      ('Carlos Villadolid','Carlos.villadolid@vallegrande.edu.pe','999822617','Gallinas','Quiero 20 gallinas a mi domicilio','3'),
-      ('Piero Saman','Piero.saman@vallegrande.edu.pe','988254151','Gallinas','Quiero 20 gallinas a mi domicilio','4'),
-      ('Alex Lora','Alex.lora@vallegrande.edu.pe','924815127','Huevos','Quiero 2K huevos a mi domicilio','5'),
-      ('Renato Sanchez','Renato Sanchez@vallegrande.edu.pe','912654716','Huevos','Quiero 1K huevos a mi domicilio','6'),
-      ('Sergio Aguero','Sergio.aguero@vallegrande.edu.pe','918753153','Gallinas','Quiero 10K gallinas a mi domicilio','7'),
-      ('Cristiano Ramirez','Cristiano.ramirez@vallegrande.edu.pe','999135155','Huevos','Quiero 5K huevos a mi domicilio','8'),
-      ('Pedro Porras','Pedro.porras@vallegrande.edu.pe','992566266','Gallinas','Quiero 2K gallinas a mi domicilio','9'),
-      ('Jesus Canales','Jesus.canales@vallegrande.edu.pe','993777712','Huevos','Quiero 20K huevos a mi domicilio','10');
+      ('Carlos Sanchez','Carlos.sanchez@vallegrande.edu.pe','988277261','Huevos','Quiero 1K huevos a mi domicilio'),
+      ('Angelo Ramirez','Angelo.ramirez@vallegrande.edu.pe','988222261','Huevos','Quiero 5k huevos a mi domicilio'),
+      ('Carlos Villadolid','Carlos.villadolid@vallegrande.edu.pe','999822617','Gallinas','Quiero 20 gallinas a mi domicilio'),
+      ('Piero Saman','Piero.saman@vallegrande.edu.pe','988254151','Gallinas','Quiero 20 gallinas a mi domicilio'),
+      ('Alex Lora','Alex.lora@vallegrande.edu.pe','924815127','Huevos','Quiero 2K huevos a mi domicilio'),
+      ('Renato Sanchez','Renato Sanchez@vallegrande.edu.pe','912654716','Huevos','Quiero 1K huevos a mi domicilio'),
+      ('Sergio Aguero','Sergio.aguero@vallegrande.edu.pe','918753153','Gallinas','Quiero 10K gallinas a mi domicilio'),
+      ('Cristiano Ramirez','Cristiano.ramirez@vallegrande.edu.pe','999135155','Huevos','Quiero 5K huevos a mi domicilio'),
+      ('Pedro Porras','Pedro.porras@vallegrande.edu.pe','992566266','Gallinas','Quiero 2K gallinas a mi domicilio'),
+      ('Jesus Canales','Jesus.canales@vallegrande.edu.pe','993777712','Huevos','Quiero 20K huevos a mi domicilio');
 
-select * from pedido;
+SELECT * FROM PEDIDO;

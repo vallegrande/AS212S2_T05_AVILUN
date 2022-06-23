@@ -12,7 +12,6 @@ var conexion = mysql.createConnection({
   password: "admin",
   database: "dbAvicolaAvilu01",
 });
-
 conexion.connect(function (error) {
     if (error) {
       throw error;
@@ -20,19 +19,17 @@ conexion.connect(function (error) {
       console.log("Conexión exitosa");
     }
   });
-
   const puerto = process.env.PUERTO || 3000;
 
   app.listen(puerto, function () {
     console.log("Servidor funcionando en puerto: " + puerto);
   });
-
   app.post("/api/pedido", (req, res) => {
 	let data = {
     	userped: req.body.USERPED,
     	emausped: req.body.EMAUSPED,
     	celusped: req.body.CELUSPED,
-    	proped: req.body.PROPED,
+    	foodped: req.body.FOODPED,
     	msgped: req.body.MSGPED
 	};
 	let sql = "INSERT INTO pedido SET ?";
