@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root {
-    --main-color: #d3ad7f;
+    --main-color: #439cc2;
     --black: #13131a;
     --bg: #13131a;
     --border: .1rem solid rgba(255, 255, 255, .3);
@@ -34,18 +34,25 @@ html::-webkit-scrollbar-track {
     background: transparent;
 }
 
+/*barra espaciadora*/
+
 html::-webkit-scrollbar-thumb {
     background: #fff;
     border-radius: 5rem;
 }
 
+/*color pagina web*/
+
 body {
     background: var(--bg);
+    background-color: #DEB887;
 }
 
 section {
     padding: 2rem 7%;
 }
+
+/*subtitulos*/
 
 .heading {
     text-align: center;
@@ -56,7 +63,7 @@ section {
 }
 
 .heading span {
-    color: rgb(255, 123, 0);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
 }
 
@@ -95,7 +102,7 @@ section {
 .header .navbar a {
     margin: 0 1rem;
     font-size: 1.9rem;
-    color: rgb(255, 123, 0);
+    color: rgb(255, 255, 255);
 }
 
 .header .navbar a:hover {
@@ -111,19 +118,13 @@ section {
 }
 
 
-
-
-
-
-
-
 .item-select-slid {
     background: #FFF  !important;
 }
 .about .row {
     display: flex;
     align-items: center;
-    background: var(--black);
+    background: #c8ab88;
     flex-wrap: wrap;
 }
 
@@ -142,14 +143,17 @@ section {
 
 .about .row .content h3 {
     font-size: 3rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
+
+/*texto de sobre nosotros*/
 
 .about .row .content p {
     font-size: 1.6rem;
-    color: #ccc;
+    color: rgb(0, 0, 0);
     padding: 1rem 0;
     line-height: 1.8;
+    font-family: justify;
 }
 
 .menu .box-container {
@@ -164,8 +168,10 @@ section {
     border: var(--border);
 }
 
+/*Tamaño de las imagenes de productos*/
+
 .menu .box-container .box img {
-    height: 10rem;
+    height: 15rem;
 }
 
 .menu .box-container .box h3 {
@@ -332,11 +338,13 @@ section {
     font-size: 2rem;
 }
 
+/*color de texto de las imagenes*/
+
 #blogs .box-container .box .content p {
     font-size: 1.8rem;
     line-height: 1.8;
     text-align: center;
-    color: rgb(255, 123, 0);
+    color: rgb(0, 0, 0);
     padding: 1rem 0;
 }
 
@@ -482,8 +490,7 @@ section {
 
 .order .row {
     padding: 2rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    background: rgb(0, 0, 0);
+    box-shadow: 0 .5rem 1rem rgba(137, 137, 137, 0.684);
     display: flex;
     gap: 1.5rem;
     border-radius: .5rem;
@@ -517,7 +524,7 @@ section {
     width: 100%;
     resize: none;
     height: 15rem;
-    background-color: #010103;
+    background-color: #5a5b5c;
 }
 
 #NombresApellidos {
@@ -557,7 +564,7 @@ section {
 }
 
 .linea{
-    border-top: 5px solid #c05600;
+    border-top: 5px solid rgb(255, 255, 255);
     margin-bottom: 40px;
 }
 
@@ -587,7 +594,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
-    background:rgba(248, 161, 61, 0.692) ;
+    background:rgba(219, 160, 50, 0.768) ;
     width: 100%;
     height: 0;
     overflow: hidden;
@@ -595,7 +602,7 @@ section {
 }
 
 .overlay h2{
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-weight: 300;
     font: size 205px;
     position: absolute;
@@ -636,6 +643,7 @@ section {
         width: 80%;
     }
 }
+
 
 
 
