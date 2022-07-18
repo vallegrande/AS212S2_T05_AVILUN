@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root {
-    --main-color: #439cc2;
-    --black: #13131a;
-    --bg: #13131a;
+    --main-color: #ffffff;
+    --black: #ffffff;
+    --bg: #000000;
     --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
@@ -18,6 +18,7 @@
     text-transform: capitalize;
     transition: .2s linear;
 }
+
 
 html {
     font-size: 62.5%;
@@ -45,7 +46,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
     background: var(--bg);
-    background-color: #DEB887;
+    background-color: #92ba83;
 }
 
 section {
@@ -56,14 +57,14 @@ section {
 
 .heading {
     text-align: center;
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
 }
 
 .heading span {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
 }
 
@@ -101,8 +102,8 @@ section {
 
 .header .navbar a {
     margin: 0 1rem;
-    font-size: 1.9rem;
-    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    color: rgb(77, 145, 86);
 }
 
 .header .navbar a:hover {
@@ -124,7 +125,7 @@ section {
 .about .row {
     display: flex;
     align-items: center;
-    background: #c8ab88;
+    background: #6a9c5b;
     flex-wrap: wrap;
 }
 
@@ -175,13 +176,13 @@ section {
 }
 
 .menu .box-container .box h3 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 2rem;
     padding: 1rem 0;
 }
 
 .menu .box-container .box .price {
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 2.5rem;
     padding: .5rem 0;
 }
@@ -193,7 +194,7 @@ section {
 }
 
 .menu .box-container .box:hover {
-    background: #fff;
+    background: rgb(68, 171, 90);
 }
 
 .menu .box-container .box:hover>* {
@@ -277,7 +278,7 @@ section {
     align-items: center;
     margin-top: -10px;
     margin-bottom: 1rem;
-    background: var(--bg);
+    background-color: #5a5959;
 }
 
 
@@ -524,7 +525,7 @@ section {
     width: 100%;
     resize: none;
     height: 15rem;
-    background-color: #5a5b5c;
+    background-color: #5a5959;
 }
 
 #NombresApellidos {
@@ -538,7 +539,7 @@ section {
 
 .order .row form .btn {
     background: none;
-    color: rgb(255, 250, 250);
+    color: rgb(0, 0, 0);
 }
 
 .order .row form .btn:hover {
@@ -594,7 +595,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
-    background:rgba(219, 160, 50, 0.768) ;
+    background:rgba(73, 181, 96, 0.768) ;
     width: 100%;
     height: 0;
     overflow: hidden;
@@ -644,12 +645,135 @@ section {
     }
 }
 
+/* slider */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container-slider
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+/* Tamaño */
+#slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+}
+#slider li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    z-index: -1;
+    opacity: 0;
+}
+#container-slider .arrowPrev, #container-slider .arrowNext{
+    font-size: 30pt;
+    color: rgba(204, 204, 204, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: 2; 
+}
+#container-slider .arrowNext {
+    left: initial;
+    right: 50px !important;
+}
 
+.btnSlider{
+    color: #FFF;
+    font-size: 15pt;
+    font-family: 'arial';
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border: 1px solid #CCC;
+    background: rgba(13, 13, 13, 0.55);
+    border-radius: 31px;
+    text-decoration: none;
+    transition: .5s all;
+}
+.btnSlider:hover{
+    background: #111;
+    border: 1px solid #111;
+}
+.listslider {
+    position: absolute;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.listslider li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.listslider li a {
+    background: #CCC;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.item-select-slid {
+    background: #FFF  !important;
+}
 
+@media screen and (max-width: 460px){
+	#container-slider .arrowPrev, #container-slider .arrowNext{
+		font-size: 20pt;
+	}
+	#container-slider .arrowPrev{
+		left: 15px;
+	}
+	#container-slider .arrowNext{
+		right: 15px !important;
+	}
+	#slider{
+		height: 400px;
+		min-height: 500px;
+	}
+	.btnSlider{
+		padding: 10px 30px;
+    	font-size: 10pt;
+	}
 
+}
 
-
+.contenido{
+    text-align: center;
+    font-size: 18px;
+    
+    
+}
 
 
 
